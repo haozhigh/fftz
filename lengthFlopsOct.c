@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include"fftz.h"
 
-static const int I = 24;
-static const int N = 16777216;
-static const int repeat = 10;
+#define I 24
+#define N 16777216
+#define repeat 10
 
 static void writeResult(int *time, char* file_name){
 	FILE* file;

@@ -45,7 +45,7 @@ int initCLEnv(CLEnv* cl){
 			clGetDeviceInfo(cl->devices[j], CL_DEVICE_VENDOR, 0, NULL, &str_size);
 			str = (cl_char*)malloc(sizeof(cl_char) * str_size + 1);
 			clGetDeviceInfo(cl->devices[j], CL_DEVICE_VENDOR, str_size, str, NULL);
-			if(strstr(str, vendor_amd) >= 0){
+			if(strstr(str, vendor_amd)){
 				printf("Selected device info:\n");
 				free(str);
 

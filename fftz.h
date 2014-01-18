@@ -20,6 +20,8 @@ extern int initCLEnv(CLEnv* cl);
 extern int releaseCLEnv(CLEnv* cl);
 extern int compileProgram(CLEnv* cl, char* file_name, cl_program* myprogram);
 
-extern int gpuFFT(CLEnv* cl, int N, int R, float* data0);
 extern int gpuFFTCoalesced(CLEnv* cl, int N, int R, float* data0);
 extern int gpuAmdFFT(CLEnv* cl, int N, int R, float* data0);
+extern int gpuFFTBase(CLEnv *cl, int N, float *data0);
+extern int gpuFFTFour(CLEnv *cl, int N, float *data0);
+extern int gpuFFTOct(CLEnv *cl, int N, float *data0);
